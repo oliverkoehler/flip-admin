@@ -1,19 +1,24 @@
+<!--
+  This example requires some changes to your config:
+
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ],
+  }
+  ```
+-->
 <template>
-  <div>
-    <input v-model='name' placeholder='Email' type='email'>
-    <input v-model='apiKey' placeholder='Password' type='password'>
-    <button @click='login'>Login</button>
-  </div>
+  <NotificationLayout>
+    <AppLogin class="h-full bg-white" />
+  </NotificationLayout>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-
-const name = ref('')
-const apiKey = ref('')
-
-const login = () => {
-
-}
-
+import AppLogin from '@/components/organisms/AppLogin.vue'
+import NotificationLayout from '../layouts/notificationLayout.vue'
 </script>
